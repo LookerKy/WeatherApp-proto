@@ -1,25 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import Loading from "./Loading";
+import * as Location from "expo-location";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.yellowContainer} />
-      <View style={styles.blueContainer} />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  yellowContainer: {
-    flex: 2,
-    backgroundColor: "yellow"
-  },
-  blueContainer: {
-    flex: 1,
-    backgroundColor: "blue"
+export default class extends React.Component {
+  getLocation = async () => {
+    const location = await Location.getCurrentPositionAsync();
+    console.log(location);
+  };
+  componentDidMount() {
+    this.getLocation();
   }
-});
+
+  render() {
+    return <Loading />;
+  }
+}
