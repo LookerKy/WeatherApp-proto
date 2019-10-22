@@ -14,7 +14,7 @@ export default class extends React.Component {
     const { data } = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}`
     );
-    console.log(data.sys);
+    console.log(data);
   };
   getLocation = async () => {
     try {
