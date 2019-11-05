@@ -12,7 +12,7 @@ const Loading = () => {
 
 const style = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, //비율
     justifyContent: "flex-end",
     paddingHorizontal: 30,
     paddingVertical: 100,
