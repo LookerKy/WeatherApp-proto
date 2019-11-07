@@ -22,6 +22,7 @@ export default class extends React.Component {
     );
     const condition = this.setCondition(weather[0].main);
     this.setState({ isLoading: false, temp, condition });
+    console.log("hello");
   };
   getLocation = async () => {
     try {
